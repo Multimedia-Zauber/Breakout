@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Breakout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <h1>NEON BREAKOUT</h1>
+        <p>Retro Arcade · Game #06</p>
+      </div>
+      <button id="restartBtn">Neustart</button>
+    </header>
+
+    <section class="hud">
+      <div><span>Score</span><strong id="score">0</strong></div>
+      <div><span>Highscore</span><strong id="highScore">0</strong></div>
+      <div><span>Leben</span><strong id="lives">3</strong></div>
+      <div><span>Level</span><strong id="level">1</strong></div>
+    </section>
+
+    <section class="game-wrap">
+      <canvas id="game" width="900" height="620"></canvas>
+
+      <div id="overlay" class="overlay visible">
+        <div class="panel">
+          <div class="icon">🧱</div>
+          <h2 id="overlayTitle">Neon Breakout</h2>
+          <p id="overlayText">Zerstöre alle Blöcke und lass den Ball nicht fallen.</p>
+          <button id="startBtn">Start</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mobile-controls">
+      <button data-dir="left">◀</button>
+      <button data-dir="right">▶</button>
+    </section>
+
+    <p class="hint">← → oder A/D bewegen · Leertaste startet Ball · P = Pause</p>
+  </main>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
